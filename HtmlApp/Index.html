@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My App</title>
+    <link href="Content/UI.Tools/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/UI.Tools/Angular/Angularjs/css/angular-gridster.min.css" rel="stylesheet" />
+    <script src="Content/UI.Tools/Jquery/jquery-1.11.3.js"></script>
+    <script src="Content/UI.Tools/Angular/Angularjs/angular.min.js"></script>
+    <script src="Content/UI.Tools/Angular/Angularjs/10.angular-gridster.min.js"></script>
+    <script src="Content/UI.Tools/Angular/UI.Bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="Content/UI.Tools/bootstrap/js/bootstrap.js"></script>
+
+    <script src="Content/UI.Tools/datatables/js/1.datatables.min.js"></script>
+    <script src="Content/UI.Tools/datatables/js/2.jquery.dataTables.js"></script>
+    <script src="Content/UI.Tools/datatables/js/4.dataTables.bootstrap.js"></script>
+
+    <script src="Scripts/App/Pms.js"></script>
+    <script src="Scripts/App/Services/PmsServices.js"></script>
+    <script src="Scripts/App/Directives/DatatableDirective.js"></script>
+
+    <script src="Scripts/App/Controllers/PmsController.js"></script>
+</head>
+<body>
+
+    <div ng-app="PmsApp" ng-controller="PmsController">
+        <div gridster="gridsterOpts">
+            <ul>
+                <li style="border: solid 1px;" gridster-item="item" ng-repeat="item in myInvestmentData">
+                    <div class="ddd" style="width: 100%; background: #ddd; padding: 10px 0px">Handle</div>
+                    {{ item }}
+                </li>
+            </ul>
+        </div>
+        Full Name: {{TestValue}}
+
+    </div>
+
+
+
+</body>
+</html>
